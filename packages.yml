@@ -1,0 +1,22 @@
+---
+ - hosts: dev, balancers, prod
+   become: True
+   tasks:
+      - name: Installing php and mariadb pckages
+        yum: 
+          name: "{{ item }}"
+          state: present 
+        loop:
+           - php
+           - mariadb
+      - name: Installing Development tools on dev group
+        yum:
+          name: "@Development Tools"
+          state: latest
+        when: inventory_hostname in groups['dev']
+
+      - name: Update all packages in dev group
+        yum:
+         name: '*'
+         state: latest
+        when: inventory_hostname in groups['dev']

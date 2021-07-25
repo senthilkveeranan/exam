@@ -1,0 +1,10 @@
+---
+ - hosts: dev, balancers, prod
+   become: True
+   vars:
+     timesync_ntp_servers:
+       - hostname: 8.8.8.8 
+         iburst: true
+
+     roles: 
+       - rhel-system-roles.timesync

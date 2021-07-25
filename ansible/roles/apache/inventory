@@ -1,0 +1,14 @@
+[dev]
+servera.lab.example.com
+
+[balancers]
+serverb.lab.example.com
+
+
+[prod]
+serverc.lab.example.com
+serverd.lab.example.com
+
+[web]
+serverb.lab.example.com
+serverd.lab.example.com

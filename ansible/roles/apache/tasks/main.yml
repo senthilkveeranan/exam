@@ -1,0 +1,26 @@
+---
+# tasks file for apache
+# - yum:
+#     name: "{{ item }}"
+#     state: latest
+#   loop:
+#      - httpd
+#      - firewalld
+#
+# - service:
+#      name: "{{ item }}"
+#      state: latest
+#      enabled: true
+#   loop:
+#      - httpd
+#      - firewalld
+#
+# - firewalld:
+#       service: http
+#       state: enabled
+#       immediate: true
+#       permanent: true
+#
+# - template: 
+#       src: index.html.j2
+#       dest: /var/www/html/index.html

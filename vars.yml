@@ -1,0 +1,10 @@
+---
+ - hosts: all 
+   become: True
+   vars:
+     key: This is for tesing variable value
+   tasks:
+     - name: Displaying varaiable
+       debug:
+         msg: "{{ key  }}"
+

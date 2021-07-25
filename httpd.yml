@@ -1,0 +1,6 @@
+---
+ - hosts: web 
+   remote_user: ansadmin
+   become: true
+   roles:
+    - apache 

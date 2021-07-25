@@ -1,0 +1,6 @@
+---
+ - hosts: prod,dev 
+   remote_user: ansadmin
+   become: true
+   roles:
+     - /home/ansadmin/ansible/roles 

@@ -1,0 +1,12 @@
+---
+ - hosts: all
+   become: True
+   gather_facts: False
+   vars:
+     user: ansadmin
+   tasks:
+     - name: Displaying vars value
+       debug:
+        msg: "{{ user }}"
+
+
